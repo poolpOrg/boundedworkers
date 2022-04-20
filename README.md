@@ -1,7 +1,8 @@
 # GO-MAXWORKERS
 
 The `maxworkers` package wraps a sync.WaitGroup with a capacity,
-allowing to parallelize a function call while ensuring that it only runs on at most 10 workers at all time:
+allowing to parallelize a function call while ensuring that it only runs on at most 10 workers at all time,
+and that all workers are done before continuing:
 
 ```go
 func main() {
@@ -12,5 +13,7 @@ func main() {
 		})
 	}
 	wg.Wait()
+	
+	fmt.Println("all workers are done")
 }
 ```
