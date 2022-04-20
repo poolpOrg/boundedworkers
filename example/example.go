@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/poolpOrg/maxworkers"
+	"github.com/poolpOrg/go-maxworkers"
 )
 
 func main() {
